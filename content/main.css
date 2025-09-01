@@ -1,0 +1,77 @@
+body{
+    background-color: rgb(226, 226, 226);
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100vw;
+}
+
+.person > div{
+    border:solid 1px black;
+    width: 30%;
+    height: 50px;
+    margin: 10px;
+}
+
+:root {
+    --A-color: #f75353; 
+    --B-color: #5356f7;
+    --C-color: #53f7ab;
+    --D-color: #f7b353;
+    --E-color: #f7e953;
+    --F-color: #f753ef;
+    --G-color: #f8ace1;
+    --H-color: #adf753;
+    --I-color: #53d1f7;
+    --J-color: #f77453;
+}
+
+#A{
+    background-color: var(--A-color);
+}
+
+#B{
+    background-color: var(--B-color);
+}
+
+#C{
+    background-color: var(--C-color);
+}
+
+#D{
+    background-color: var(--D-color);
+}
+
+#E{
+    background-color: var(--E-color);
+}
+
+#F{
+    background-color: var(--F-color);
+}
+
+#G{
+    background-color: var(--G-color);
+}
+
+#H{
+    background-color: var(--H-color);
+}
+
+#I{
+    background-color: var(--I-color);
+}
+
+#J{
+    background-color: var(--J-color);
+}
