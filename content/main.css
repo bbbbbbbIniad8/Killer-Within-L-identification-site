@@ -16,12 +16,6 @@ body{
     width: 100vw;
 }
 
-.person > div{
-    border:solid 1px black;
-    width: 30%;
-    height: 50px;
-    margin: 10px;
-}
 
 :root {
     --A-color: #f75353; 
@@ -36,42 +30,26 @@ body{
     --J-color: #f77453;
 }
 
-#A{
-    background-color: var(--A-color);
+#A { --item-color: var(--A-color); }
+#B { --item-color: var(--B-color); }
+#C { --item-color: var(--C-color); }
+#D { --item-color: var(--D-color); }
+#E { --item-color: var(--E-color); }
+#F { --item-color: var(--F-color); }
+#G { --item-color: var(--G-color); }
+#H { --item-color: var(--H-color); }
+#I { --item-color: var(--I-color); }
+#J { --item-color: var(--J-color); }
+
+.person > div{
+    border:solid 1px black;
+    width: 30%;
+    height: 50px;
+    margin: 10px;
+    
+    background-color: var(--item-color); 
 }
 
-#B{
-    background-color: var(--B-color);
-}
-
-#C{
-    background-color: var(--C-color);
-}
-
-#D{
-    background-color: var(--D-color);
-}
-
-#E{
-    background-color: var(--E-color);
-}
-
-#F{
-    background-color: var(--F-color);
-}
-
-#G{
-    background-color: var(--G-color);
-}
-
-#H{
-    background-color: var(--H-color);
-}
-
-#I{
-    background-color: var(--I-color);
-}
-
-#J{
-    background-color: var(--J-color);
+.person > div:hover{
+    border: 1px inset rgb(255, 255, 255);
 }
