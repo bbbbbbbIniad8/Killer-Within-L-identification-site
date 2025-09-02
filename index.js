@@ -9,7 +9,7 @@ const dict = {
 const people = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
 const personContainer = document.querySelector('.person');
 
-people.forEach((personName, index) => {
+people.forEach((personName, index) => { 
     const div = document.createElement('div');
     div.id = personName;
 
