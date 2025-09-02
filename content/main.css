@@ -16,6 +16,10 @@ body{
     align-items: center;
 }
 
+#judge-text{
+    white-space: pre-line;
+}
+
 .person{
     flex-wrap: wrap;
     justify-content: space-between;

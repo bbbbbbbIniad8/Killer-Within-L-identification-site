@@ -61,9 +61,12 @@ people.forEach((personName, index) => {
 
 function selectProcessKiller(event){
     const index = Number(event.target.value);
-    if (index != -1){
-        check_person(index)
-        if (whoKillerIndex != -1 && whosubKillerIndex){
+    if (index != -1 && index != whosubKillerIndex){
+        if (personState.checkList[index] === false){
+            check_person(index)
+        }
+        
+        if (whoKillerIndex != -1){
             check_person(whoKillerIndex)
         }
         whoKillerIndex = index;
@@ -98,6 +101,14 @@ function judge_who_L() {
     const answer = personState.checkList
         .map((isChecked, index) => isChecked === false ? dict[index] : null)
         .filter(Boolean);
+    
+    if (answer.length <= 0) {
+        message = '夜神月: 何が何だかわからない...。';
+    } else if (answer.length <= 1){
+        message = `夜神月: Lはこの人物の可能性が非常に高い。\n[${answer.join(', ')}]\n 強硬手段を使うことをお勧めする。`;
+    } else {
+        message = `夜神月: Lはこの中に潜伏している可能性がある。\n[${answer.join(', ')}]`;
+    }
 
-    document.getElementById("judgeText").textContent = `夜神月: Lはこの中に潜伏している可能性が高い。\n${answer.join(', ')}`
+    document.getElementById("judge-text").textContent = message;
 }
