@@ -12,6 +12,19 @@ const personContainer = document.querySelector('.person');
 people.forEach((personName, index) => {
     const div = document.createElement('div');
     div.id = personName;
+
+    const innerElement = document.createElement('div'); 
+    innerElement.id = `${personName}_name`;
+    innerElement.className = 'person_name';
+    innerElement.textContent = personName;
+
+    const checked = document.createElement('div'); 
+    checked.id = `${personName}_checked`;
+    checked.className = 'person_checked';
+    
+    div.appendChild(innerElement);
+    div.appendChild(checked);
+
     div.addEventListener('click', () => {
         check_person(index); 
     });
@@ -21,7 +34,7 @@ people.forEach((personName, index) => {
 function check_person(index){
     const target = personState.checkList[index];
     personState.checkList[index] = (target === true) ? false : true;
-    let element = document.getElementById(`${dict[index]}`);
+    let element = document.getElementById(`${dict[index]}_checked`);
     element.textContent = (target === true) ? "" : "checked";
 }
 
